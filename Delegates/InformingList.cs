@@ -40,7 +40,7 @@ namespace Delegates
         {
             get
             {
-                return this[index];
+                return base[index];
             }
             set
             {
@@ -49,7 +49,7 @@ namespace Delegates
                 ListEventArgs changes = new ListEventArgs(System.DateTime.Now, "Modified", changed);
                 OnSecondChange(changes);
 
-                this[index] = value;
+                base[index] = value;
             }
         }
 
